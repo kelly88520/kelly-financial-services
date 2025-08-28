@@ -11,12 +11,13 @@
   <meta name="keywords" content="Seattle financial planning, 西雅图财务规划, Seattle wealth management, 华人理财, 财富管理, 家庭财务, 保险规划, 投资顾问, retirement planning, 教育基金, 财务自由">
   <meta name="author" content="Kelly Lei">
 
-  <!-- OG -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Kelly Financial Services | 西雅图财务规划 Seattle Financial Planning">
   <meta property="og:description" content="Seattle Financial Planning & Wealth Management · 西雅图财务规划与财富管理">
-  <meta property="og:url" content="https://kellyfinancial.github.io/kelly-financial-services/">
+  <meta property="og:url" content="https://kelly88520.github.io/kelly-financial-services/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://kellyfinancial.github.io/kelly-financial-services/kelly-financial-advisor-seattle.jpg">
+  <!-- 为避免丢图，这里也使用现有的 IMG_0572.JPG。若你后来上传新图，再改成新文件名即可。 -->
+  <meta property="og:image" content="https://kelly88520.github.io/kelly-financial-services/IMG_0572.JPG">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="zh_CN">
 
@@ -51,11 +52,13 @@
     .btn.primary{background:var(--brand);color:#fff;border-color:transparent;box-shadow:0 0 0 0 rgba(14,165,233,0)}
     .btn.primary:focus,.btn.primary:hover{box-shadow:0 0 0 6px var(--ring)}
     footer{margin:48px 0 24px;color:var(--muted);font-size:14px;text-align:center}
+    /* 默认英文显示，中文先隐藏 */
     #zh{display:none}
   </style>
 
   <noscript>
     <style>
+      /* 无 JS 时两种语言都显示，保证内容可见 */
       #zh, #en { display:block !important; }
     </style>
   </noscript>
@@ -74,7 +77,8 @@
   <!-- English (default) -->
   <main id="en" lang="en">
     <section class="hero container">
-      <img src="kelly-financial-advisor-seattle.jpg" alt="Seattle Financial Advisor Kelly Lei" />
+      <!-- 使用仓库现有文件名，避免丢图。如果你后来上传了新图，可把 src 改成新文件名 -->
+      <img src="IMG_0572.JPG" alt="Seattle Financial Advisor Kelly Lei" />
       <h1>Family Asset Protection & Education Planning</h1>
       <p>I help families with <strong>protection, college funding, tax efficiency, retirement, and legacy</strong> through client-first education.</p>
       <p class="tagline">We represent our clients · We focus on financial education</p>
@@ -98,18 +102,21 @@
         </div>
       </div>
     </section>
-   <section class="container card">
+
+    <!-- 英文 Bridge 区块 -->
+    <section class="container card" id="bridge-en">
       <h3>How We Build the “Bridge”</h3>
       <p>We learn your family’s needs → match suitable providers and products → provide ongoing service and education.</p>
       <div class="bridge" aria-hidden="true">
-      <div class="pill">Family Needs</div><div class="arrow"></div>
-      <div class="pill">Independent Advisor (Client-First)</div><div class="arrow"></div>
-      <div class="pill">Multiple Partner Providers & Products</div>
-     </div>
-      <div style="margin-top:14px;color:var(--muted);font-size:14px;">
-    Partner brands (partial): American Funds, Nationwide, Jackson, Transamerica, Fidelity, Franklin Templeton, etc.
+        <div class="pill">Family Needs</div><div class="arrow"></div>
+        <div class="pill">Independent Advisor (Client-First)</div><div class="arrow"></div>
+        <div class="pill">Multiple Partner Providers & Products</div>
       </div>
-  </section>
+      <div style="margin-top:14px;color:var(--muted);font-size:14px;">
+        Partner brands (partial): American Funds, Nationwide, Jackson, Transamerica, Fidelity, Franklin Templeton, etc.
+      </div>
+    </section>
+
     <section class="container card" id="contact-en">
       <h3>Contact</h3>
       <ul>
@@ -125,7 +132,7 @@
   <!-- 中文 -->
   <main id="zh" lang="zh-Hans">
     <section class="hero container">
-      <img src="kelly-financial-advisor-seattle.jpg" alt="西雅图财务规划顾问 Kelly Lei" />
+      <img src="IMG_0572.JPG" alt="西雅图财务规划顾问 Kelly Lei" />
       <h1>家庭资产保护与子女教育规划</h1>
       <p>专注提供 <strong>资产保护、教育金、税务优化、退休与传承</strong> 的综合解决方案。</p>
       <p class="tagline">我们代表客户 · 我们专注于金融教育</p>
