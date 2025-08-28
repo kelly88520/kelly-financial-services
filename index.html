@@ -50,7 +50,7 @@
     .btn.primary:focus,.btn.primary:hover{box-shadow:0 0 0 6px var(--ring)}
     footer{margin:48px 0 24px;color:var(--muted);font-size:14px;text-align:center}
     /* 关键：默认中文显示，英文先隐藏，避免“中间内容”被样式整体隐藏 */
-    #en{display:none}
+    #zh{display:none}
   </style>
 
   <noscript>
@@ -78,7 +78,7 @@
       <h1>家庭资产保护与子女教育规划</h1>
       <p>专注提供 <strong>资产保护、教育金、税务优化、退休与传承</strong> 的综合解决方案。</p>
       <p class="tagline">我们代表客户 · 我们专注于金融教育</p>
-      <div class="cta"><a class="btn primary" href="#contact">预约15分钟咨询</a></div>
+      <div class="cta"><a class="btn primary" href="#contact">立即预约免费咨询</a></div>
     </section>
 
     <!-- ✅ 中间内容：服务与解决方案 -->
@@ -133,7 +133,7 @@
       <h1>Family Asset Protection & Education Planning</h1>
       <p>I help families with <strong>protection, college funding, tax efficiency, retirement, and legacy</strong> through client-first education.</p>
       <p class="tagline">We represent our clients · We focus on financial education</p>
-      <div class="cta"><a class="btn primary" href="#contact-en">Book a 15-min intro call</a></div>
+      <div class="cta"><a class="btn primary" href="#contact-en">Schedule Free Consultation</a></div>
     </section>
 
     <section class="container grid grid-2" id="services-en">
@@ -189,7 +189,7 @@
         }
       }
 
-      setLang('zh'); // 默认中文
+      setLang('en'); // 默认中文
       btnZh?.addEventListener('click',()=>setLang('zh'));
       btnEn?.addEventListener('click',()=>setLang('en'));
       const y=document.getElementById('y'); if(y) y.textContent=new Date().getFullYear();
