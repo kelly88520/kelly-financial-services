@@ -39,8 +39,7 @@
     .hero .tagline{font-weight:700;color:var(--brand);margin-top:10px}
     .grid{display:grid;grid-template-columns:1fr;gap:22px}
     @media (min-width:900px){ .grid-2{grid-template-columns:1fr 1fr} }
-    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:16px;padding:22px;opacity:0;transform:translateY(20px);transition:opacity 0.8s ease, transform 0.8s ease}
-    .card.fade-in{opacity:1;transform:translateY(0)}
+    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:16px;padding:22px}
     .card h3{margin:0 0 8px;font-size:20px}
     .list{display:grid;gap:8px}
     .pill{display:inline-block;background:#fff;border:1px solid #e5e7eb;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:14px}
@@ -54,10 +53,15 @@
     footer{margin:48px 0 24px;color:var(--muted);font-size:14px;text-align:center}
     /* 默认英文显示，中文先隐藏 */
     #zh{display:none}
+
+    /* Fade-in only for selected sections */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+    .reveal.show{opacity:1;transform:none}
   </style>
 
   <noscript>
     <style>
+      /* 无 JS 时两种语言都显示，保证内容可见 */
       #zh, #en { display:block !important; }
     </style>
   </noscript>
@@ -83,23 +87,60 @@
       <div class="cta"><a class="btn primary" href="#contact-en">Schedule Free Consultation</a></div>
     </section>
 
+    <!-- 1) Services -->
     <section class="container grid grid-2" id="services-en">
-      ...
+      <div class="card">
+        <h3>Common Needs</h3>
+        <div class="list">
+          <span class="pill">Emergency Fund</span><span class="pill">Mortgage Coverage</span><span class="pill">Investment Planning</span>
+          <span class="pill">Tax Efficiency</span><span class="pill">College Funding</span><span class="pill">Retirement</span>
+          <span class="pill">Protection (Insurance)</span><span class="pill">Estate Planning</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Solutions</h3>
+        <div class="list">
+          <span class="pill">401(k)/IRA Optimization</span><span class="pill">Risk Management</span><span class="pill">Health &amp; LTC</span>
+          <span class="pill">Diversified Strategies</span><span class="pill">Education Fund</span><span class="pill">Legacy Planning</span>
+        </div>
+      </div>
     </section>
 
-    <section class="container card" id="about-en">
+    <!-- 2) About -->
+    <section class="container card reveal" id="about-en">
       <h3>About Kelly Lei</h3>
-      <p>...</p>
+      <p>
+        I hold a Bachelor’s degree in Business Accounting &amp; Finance from the University of Washington and have worked at renowned firms including Stryker, EY, and Novogradac, specializing in financial analysis, compliance, audit, and budget management. In addition, I am a <strong>licensed insurance professional in the U.S.</strong>, enabling me to provide clients with compliant insurance and risk management solutions.
+      </p>
+      <p>
+        With this strong foundation, I founded <strong>Kelly Financial Services</strong> to deliver customized financial planning strategies for individuals and families—covering risk protection, education funds, retirement planning, and legacy wealth transfer. My mission is to transform complex financial and insurance concepts into clear, actionable strategies, empowering clients to achieve their long-term goals with confidence and peace of mind.
+      </p>
     </section>
 
-    <section class="container card" id="bridge-en">
+    <!-- 3) Bridge -->
+    <section class="container card reveal" id="bridge-en">
       <h3>How We Build the “Bridge”</h3>
-      <p>...</p>
+      <p>We learn your family’s needs → match suitable providers and products → provide ongoing service and education.</p>
+      <div class="bridge" aria-hidden="true">
+        <div class="pill">Family Needs</div><div class="arrow"></div>
+        <div class="pill">Independent Advisor (Client-First)</div><div class="arrow"></div>
+        <div class="pill">Multiple Partner Providers &amp; Products</div>
+      </div>
+      <div style="margin-top:14px;color:var(--muted);font-size:14px;">
+        Partner brands (partial): American Funds, Nationwide, Jackson, Transamerica, Fidelity, Franklin Templeton, etc.
+      </div>
     </section>
 
+    <!-- 4) Contact -->
     <section class="container card" id="contact-en">
       <h3>Contact</h3>
-      <ul>...</ul>
+      <ul>
+        <li>Name: <strong>Kelly Lei</strong></li>
+        <li>Email:
+          <a class="btn primary" href="mailto:kellyventures52588@gmail.com?subject=Financial%20Planning%20Consultation&amp;body=Hello%20Kelly%2C%20I%20would%20like%20to%20schedule%20a%20free%20consultation.">📧 Send Email</a>
+        </li>
+        <li>Phone: <a class="btn" href="tel:2068300035">📞 206-830-0035</a></li>
+      </ul>
     </section>
   </main>
 
@@ -113,23 +154,60 @@
       <div class="cta"><a class="btn primary" href="#contact">立即预约免费咨询</a></div>
     </section>
 
+    <!-- 1) Services -->
     <section class="container grid grid-2" id="services">
-      ...
+      <div class="card">
+        <h3>常见家庭需求</h3>
+        <div class="list">
+          <span class="pill">紧急备用金</span><span class="pill">房贷保障</span><span class="pill">投资规划</span>
+          <span class="pill">节税</span><span class="pill">孩子大学教育金</span><span class="pill">退休规划</span>
+          <span class="pill">家庭保障（保险/风险转移）</span><span class="pill">遗产与传承规划</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>可提供的解决方案</h3>
+        <div class="list">
+          <span class="pill">401(k)/IRA 优化</span><span class="pill">风险管理工具</span><span class="pill">健康/长期照护</span>
+          <span class="pill">多元化投资组合</span><span class="pill">孩子教育金</span><span class="pill">财富传承</span>
+        </div>
+      </div>
     </section>
 
-    <section class="container card" id="about-zh">
+    <!-- 2) About -->
+    <section class="container card reveal" id="about-zh">
       <h3>关于 Kelly Lei</h3>
-      <p>...</p>
+      <p>
+        我毕业于华盛顿大学商业会计与金融专业，先后在 Stryker、EY、Novogradac 等知名企业从事财务分析、审计、合规及预算管理工作，积累了扎实的专业背景。同时，我持有 <strong>美国保险执照</strong>，能够为客户提供合法合规的保险与风险规划服务。
+      </p>
+      <p>
+        基于多年企业财务与合规经验，我创立了 <strong>Kelly Financial Services</strong>，专注为个人与家庭提供量身定制的财富规划方案，涵盖风险保障、教育基金、退休规划及财富传承。我的使命是将复杂的财务与保险知识转化为清晰、可执行的计划，帮助客户在不确定的市场环境中更安心、更合规、更高效地实现长期财务目标。
+      </p>
     </section>
 
-    <section class="container card" id="bridge-zh">
+    <!-- 3) Bridge -->
+    <section class="container card reveal" id="bridge-zh">
       <h3>我们如何为您搭建“桥梁”</h3>
-      <p>...</p>
+      <p>了解您的家庭需求 → 匹配合适的产品与机构 → 持续服务与教育，陪伴您长期成长。</p>
+      <div class="bridge" aria-hidden="true">
+        <div class="pill">家庭需求</div><div class="arrow"></div>
+        <div class="pill">独立顾问（代表客户）</div><div class="arrow"></div>
+        <div class="pill">多家合作机构与产品</div>
+      </div>
+      <div style="margin-top:14px;color:var(--muted);font-size:14px;">
+        合作品牌（部分）：American Funds、Nationwide、Jackson、Transamerica、Fidelity、Franklin Templeton 等。
+      </div>
     </section>
 
+    <!-- 4) Contact -->
     <section class="container card" id="contact">
       <h3>联系我</h3>
-      <ul>...</ul>
+      <ul>
+        <li>姓名：<strong>Kelly Lei</strong></li>
+        <li>电子邮箱：
+          <a class="btn primary" href="mailto:kellyventures52588@gmail.com?subject=预约咨询&amp;body=您好%20Kelly%EF%BC%8C我想预约一次免费财务咨询。">📧 发送邮件</a>
+        </li>
+        <li>电话：<a class="btn" href="tel:2068300035">📞 206-830-0035</a></li>
+      </ul>
     </section>
   </main>
 
@@ -158,7 +236,7 @@
         }
       }
 
-      setLang('en');
+      setLang('en'); // 默认英文
 
       btnZh?.addEventListener('click',()=>setLang('zh'));
       btnEn?.addEventListener('click',()=>setLang('en'));
@@ -166,18 +244,19 @@
       const y=document.getElementById('y');
       if(y) y.textContent=new Date().getFullYear();
 
-      // IntersectionObserver for fade-in effect
-      const observer = new IntersectionObserver(entries => {
+      // IntersectionObserver for fade-in effect (About + Bridge only)
+      const io = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if(entry.isIntersecting){
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
+            entry.target.classList.add('show');
+            io.unobserve(entry.target);
           }
         });
       }, {threshold:0.2});
 
-      document.querySelectorAll('#about-en, #bridge-en, #about-zh, #bridge-zh').forEach(el => {
-        observer.observe(el);
+      ['#about-en', '#bridge-en', '#about-zh', '#bridge-zh'].forEach(sel => {
+        const el = document.querySelector(sel);
+        if(el) io.observe(el);
       });
     });
   </script>
